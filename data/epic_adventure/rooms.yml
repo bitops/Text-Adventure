@@ -5,6 +5,7 @@
   info: A trail runs to the north from here.
   rooms:
     north: forest
+  prompt: "Create an ASCII art of a serene lake surrounded by trees. The lake should be calm, with ripples on the water and trees lining the horizon. A small trail leads north into the forest."
 -
   handle: forest
   desc: A forest full of lush trees.
@@ -13,6 +14,7 @@
     west: home
     east: mountains
     south: lake
+  prompt: "Create an ASCII art of a dense forest filled with lush trees. The trees should have thick trunks and leafy canopies. There is a path that splits in three directions: one leading west toward a home, another east to mountains, and one heading south back to the lake."
 -
   handle: home
   desc: Your home. It is a happy house.
@@ -20,6 +22,7 @@
   rooms:
     east: forest
     west: home_main
+  prompt: "Create an ASCII art of a cozy house. It should look like a happy, simple home with a path leading east back into a forest. The house is quiet and welcoming, with a door leading inside to the west."
 -
   handle: home_main
   desc: You are standing in the main room of your house.
@@ -27,12 +30,14 @@
   rooms:
     north: home_study
     east: home
+  prompt: "Create an ASCII art of a simple but clean and cozy main room of a house. There should be minimal furniture, perhaps a small table and a chair. A doorway to the north leads to a study, and an exit to the east leads outside."
 -
   handle: home_study
   desc: You are in your study. It is a clean room with a desk and windows facing outside.
   info: Your study is where your work gets done. There is a letter on your desk.
   rooms:
     south: home_main
+  prompt: "Create an ASCII art of a clean study room with a desk and windows that overlook the outside. The desk has papers and a letter on it. Sunlight streams in through the windows, and the room feels peaceful. An exit to the south leads back to the main room."
 -
   handle: mountains
   desc: These are the mountains. From up here you can see the valley in which you live.
@@ -40,6 +45,7 @@
   rooms:
     west: forest
     east: pass
+  prompt: "Create an ASCII art of a mountainous landscape. The mountains are tall and craggy, with a view of a distant valley below. A path leads west back to the forest and east toward a mountain pass. Clouds hang low in the sky, giving the scene a sense of height."
 -
   handle: pass
   desc: This is the pass that leads to the ocean. It is rocky terrain with huge stone walls all around.
@@ -47,6 +53,7 @@
   rooms:
     west: mountains
     east: ocean
+  prompt: "Create an ASCII art of a rocky mountain pass with steep stone walls on either side. The terrain is rugged, and the path snakes eastward toward the ocean. There is a hint of the ocean in the distance, with the sound of waves faintly heard. To the west lies the mountain range."
 -
   handle: ocean
   desc: You are standing by the ocean. It is overcast and cloudy here. Seagulls circle overhead.
@@ -54,6 +61,7 @@
   rooms:
     west: pass
     east: village
+  prompt: "Create an ASCII art of an overcast ocean scene. The ocean waves are gently rolling, with seagulls circling overhead. The horizon is cloudy, and to the east is a distant village. The scene feels vast and lonely, with the pass to the west."
 -
   handle: village
   desc: You are standing among the buildings of an abandoned village. To the east is the village temple.
@@ -62,7 +70,7 @@
   rooms:
     west: ocean
     east: village_temple
-
+  prompt: "Create an ASCII art of an abandoned village by the ocean. There are small, weathered buildings in the background, and a glowing crystal lies on the ground in the center of the scene. The village feels eerie and forgotten, with a path leading east to a temple and west back to the ocean."
 -
   handle: village_temple
   desc: The village temple feels ancient and silent. The gentle sound of water can be heard.
@@ -70,10 +78,11 @@
   rooms:
     west: village
     east: village_temple_hidden_sanctuary
-
+  prompt: "Create an ASCII art of an ancient and silent temple in a forgotten village. The temple has worn stone walls, and a waterfall altar is visible on the eastern side. Sunlight gleams off the water in the altar, casting a peaceful glow. An exit leads west back to the village."
 -
   handle: village_temple_hidden_sanctuary
   desc: You have examined the altar and found a hidden chamber.
   info: The chamber is an empty room other than a white stone pillar in the center of the room. The pillar has a small indentation in the top.
   rooms:
     west: village_temple
+  prompt: "Create an ASCII art of a hidden chamber behind a waterfall altar. The chamber is empty except for a white stone pillar in the center, which has a small indentation on top. The room is dark and mysterious, with stone walls and an exit leading back to the temple to the west."
