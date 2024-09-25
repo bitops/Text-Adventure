@@ -1,5 +1,3 @@
-require 'readline'
-
 class Engine
   attr_accessor :splash_message
 

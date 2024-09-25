@@ -1,6 +1,3 @@
-require File.join(File.dirname(__FILE__), 'room')
-require 'yaml'
-
 class GameDataLoader
 
 	def load_location_data(file)

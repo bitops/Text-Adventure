@@ -1,13 +1,16 @@
+require 'readline'
+require 'yaml'
+
 GAME_ROOT = File.expand_path(File.join(File.dirname(__FILE__), ".."))
 
-require File.join(GAME_ROOT, 'lib', 'bootstrap')
-require File.join(GAME_ROOT, 'lib', 'game')
+Dir[File.join(GAME_ROOT, 'lib', '*.rb')].each { |file| require file }
+
 
 def lookup_file_from(path)
   File.absolute_path(File.join(GAME_ROOT, path))
 end
 
-# TODO: this could be a little nicer.
+# read in data files passed in play.sh
 location_data_file = lookup_file_from "#{ARGV[0]}"
 message_data_file = lookup_file_from "#{ARGV[1]}"
 
