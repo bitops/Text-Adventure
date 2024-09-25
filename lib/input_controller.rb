@@ -36,7 +36,7 @@ class InputController
       item = tokens.last
       room = avatar.location
 			if room.has_item?(item)
-				room.user_pick_ups(item)
+				avatar.pick_up(item)
 				@current_message = "You pick up the #{item}."
 			else
 				@current_message = "Sorry, there does not appear to be an #{item} here."

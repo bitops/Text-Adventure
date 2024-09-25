@@ -6,7 +6,7 @@ class Avatar
 
 	def initialize(starting_location)
 		@current_room = starting_location
-		@inventory = Inventory.new
+		@inventory = Inventory.new []
 	end
 
 	def can_move?(direction)
@@ -24,8 +24,9 @@ class Avatar
 	end
 
   def pick_up(item)
-    if @room.has_item? item
-      @room.user_picks_up item
+    if @current_room.has_item? item
+      picked_up_item = @current_room.user_picks_up item
+      add_item_to_inventory picked_up_item
       true
     else
       false

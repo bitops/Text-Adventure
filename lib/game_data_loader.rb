@@ -26,22 +26,17 @@ class GameDataLoader
 	end
 
 	def build_room(room_data)
-		room = get_room
+		room = Room.new(room_data["items"])
 		room.handle            = room_data["handle"]
 		room.description       = room_data["desc"]
 		room.info              = room_data["info"]
 		room.rooms             = room_data["rooms"]
 		room.starting_location = room_data["starting_location"]
-		room
+    room
 	end
 
 	private
-	def get_room
-    Room.new
-	end
-
 	def load_data_from(file)
 	  YAML.load_file(file)
 	end
-
 end

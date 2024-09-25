@@ -1,4 +1,11 @@
-* add an inventory in the game. 
-* add a real grammar for parsing commands
-* state machine for NPC interaction
-* level editor
+TASKS:
+
+* add an inventory in the game
+  - avatar has inventory
+    - let items have verbs they respond to (e.g. 'read' for 'letter')
+    - when correct 'verb' is given, provide 'reply' for same
+  - 'look' command keys off of room inventory
+    - rooms have inventory
+      - let items have descriptions
+        - introduce item class
+
