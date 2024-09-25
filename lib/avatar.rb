@@ -35,4 +35,15 @@ class Avatar
 	def add_item_to_inventory(item)
 		@inventory.add item
 	end
+
+  def list_inventory_message
+    items = @inventory.items
+    if items.empty?
+      "Your inventory is empty."
+    else
+      message = "You have the following items in your inventory:\n"
+      items.each {|item| message += "- #{item}\n"}
+      message
+    end
+  end
 end

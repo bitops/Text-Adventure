@@ -1,6 +1,6 @@
 class InputController
 	attr_reader :avatar, :current_message
-	
+
 	def avatar=(avatar)
 		@avatar = avatar
 	end
@@ -18,7 +18,7 @@ class InputController
 		unless valid?(input)
 			@current_message = "Sorry, that is not a valid command."
 			return
-		end		
+		end
 
 		command = tokens.first
 
@@ -30,12 +30,27 @@ class InputController
 			else
 				@current_message = "Sorry, you cannot go #{direction} from here."
 			end
-		end	
+		end
+
+    if command == "take"
+      item = tokens.last
+      room = avatar.location
+			if room.has_item?(item)
+				room.user_pick_ups(item)
+				@current_message = "You pick up the #{item}."
+			else
+				@current_message = "Sorry, there does not appear to be an #{item} here."
+			end
+		end
+
+    if command == "inventory"
+      @current_message = avatar.list_inventory_message
+    end
 
 		if command == "look"
 			@current_message = avatar.location.info
 		end
-		
+
 		if command == "help"
 			@current_message = @messages["help"]
 		end
@@ -58,7 +73,7 @@ class InputController
 	end
 
 	def valid_commands
-		@commands ||= %w(look exit quit help)
+		@commands ||= %w(look exit quit inventory help)
 	end
 
 end

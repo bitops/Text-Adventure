@@ -13,9 +13,6 @@ class Inventory
     items.include?(item)
   end
 
-  def list_contents
-  end
-
   def remove(item)
     if items.include?(item)
       removed_item = items.delete(item)
