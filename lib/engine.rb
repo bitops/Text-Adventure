@@ -9,11 +9,11 @@ class Engine
 
   def repl
     loop do
-  	puts @ctl.current_message
+  	  puts @ctl.current_message
       input = Readline.readline('> ', true)
       break if input == 'exit'
-  	@ctl.evaluate(input)
-  end
+  	  @ctl.evaluate(input)
+    end
   end
 
   def read_line
