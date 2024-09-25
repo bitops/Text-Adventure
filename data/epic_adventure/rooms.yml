@@ -35,6 +35,7 @@
   handle: home_study
   desc: You are in your study. It is a clean room with a desk and windows facing outside.
   info: Your study is where your work gets done. There is a letter on your desk.
+  items: letter
   rooms:
     south: home_main
   prompt: "Create an ASCII art of a clean study room with a desk and windows that overlook the outside. The desk has papers and a letter on it. Sunlight streams in through the windows, and the room feels peaceful. An exit to the south leads back to the main room."
