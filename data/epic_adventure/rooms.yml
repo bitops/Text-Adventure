@@ -41,7 +41,10 @@
   desc: You are in your study. It is a clean room with a desk and windows facing outside.
   info: Your study is where your work gets done. There is a letter on your desk.
   items:
-    - letter
+    - letter:
+      handle: letter
+      name: Letter
+      description: This is a letter from far away. There is likely an important message inside.
   rooms:
     south: home_main
   prompt: "Create an ASCII art of a clean study room with a desk and windows that overlook the outside. The desk has papers and a letter on it. Sunlight streams in through the windows, and the room feels peaceful. An exit to the south leads back to the main room."
@@ -77,7 +80,10 @@
   desc: You are standing among the buildings of an abandoned village. To the east is the village temple.
   info: There is a strange glowing crystal lying on the ground.
   items:
-    - crystal
+    - crystal:
+      handle: crystal
+      name: Glowing Crystal
+      description: This crystal glows with an eerie light, hinting at ancient mysteries.
   rooms:
     west: ocean
     east: village_temple

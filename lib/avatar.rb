@@ -43,7 +43,7 @@ class Avatar
       "Your inventory is empty."
     else
       message = "You have the following items in your inventory:\n"
-      items.each {|item| message += "- #{item}\n"}
+      items.each {|item| message += "- #{item.inspect}\n"}
       message
     end
   end

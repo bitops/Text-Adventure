@@ -2,24 +2,13 @@ TASKS:
 
 * add an inventory in the game
   - avatar has inventory
+    - print inventory contents correctly
     - let items have verbs they respond to (e.g. 'read' for 'letter')
       - when correct 'verb' is given, provide 'reply' for same
-        - introduce item class
   - 'look' command keys off of room inventory
     - rooms have inventory
       - let items have descriptions
-        - introduce item class
+    - picking up item in room removes it from the room
 
-Plan for next coding session:
 
-Model: mistral:7b
 
- In your next coding session, follow the steps below to update your Ruby game code:
-
-1. Define an `Item` class with `attr_accessor` for `name` and `description`.
-2. Update the `Inventory`, `Room`, and `GameDataLoader` classes as follows:
-	* In the `Inventory` class, initialize it to accept a list of `Item` instances.
-	* In the `Room` class, update the `initialize` method to accept an array of `Item` instances for the room items.
-	* Update the `GameDataLoader` class's `build_room` method to create `Item` instances from the game data and add them to each room.
-3. Modify the YAML files to include `Item` instances with appropriate names and descriptions in the `items` arrays for each room.
-4. Load your updated YAML files into your game, so that rooms have their corresponding items when they are accessed during gameplay.

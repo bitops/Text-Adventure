@@ -26,14 +26,20 @@ class GameDataLoader
 	end
 
 	def build_room(room_data)
-		room = Room.new(room_data["items"])
-		room.handle            = room_data["handle"]
-		room.description       = room_data["desc"]
-		room.info              = room_data["info"]
-		room.rooms             = room_data["rooms"]
-		room.starting_location = room_data["starting_location"]
+	  items = room_data["items"].map do |item|
+      Item.new(item['handle'], item['name'], item['description'])
+    end
+
+    room = Room.new(items)
+
+    room.handle            = room_data["handle"]
+    room.description       = room_data["desc"]
+    room.info              = room_data["info"]
+    room.rooms             = room_data["rooms"]
+    room.starting_location = room_data["starting_location"]
     room
-	end
+  end
+
 
 	private
 	def load_data_from(file)
